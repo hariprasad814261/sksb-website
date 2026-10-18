@@ -1,0 +1,5 @@
+.git
+node_modules
+*.bak
+*.pre_nav_fix
+*.tmp
