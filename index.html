@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth overflow-x-hidden">
+<html lang="en" class="overflow-x-hidden">
 
 <head>
   <meta charset="UTF-8" />
@@ -330,6 +330,9 @@
     href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap"
     rel="stylesheet" />
 
+  <!-- Lenis Buttery Smooth Scrolling Stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css" />
+
   <!-- Tailwind CSS v3 CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -370,17 +373,20 @@
       color: #1E122A;
     }
 
-    /* Scroll reveal system — animate only transform & opacity */
+    /* Scroll reveal system — hardware-composited 3D transform & silky easing for butter-smooth 60/120fps */
     .reveal {
       opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translate3d(0, 20px, 0);
+      will-change: opacity, transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .reveal.active {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
 
     .reveal-delay-1 {
@@ -409,6 +415,13 @@
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
       background-repeat: repeat;
       z-index: 1;
+    }
+
+    /* Eliminate heavy SVG fractal noise filter on mobile & tablet GPUs to guarantee stutter-free scrolling */
+    @media (max-width: 1024px) {
+      .grain-overlay::before {
+        display: none !important;
+      }
     }
 
     /* Focus-visible outline for accessibility */
@@ -476,13 +489,63 @@
       }
     }
 
-    /* ─── Smooth Scrolling & GPU Accelerated Performance ──────────────── */
+    /* ─── Buttery-Smooth Scrolling Engine (Lenis) & GPU Compositing ────── */
+    html.lenis, html.lenis body {
+      height: auto;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+
+    .lenis.lenis-scrolling iframe {
+      pointer-events: none;
+    }
+
     html {
-      scroll-behavior: smooth;
       scroll-padding-top: 5.5rem;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       -webkit-text-size-adjust: 100%;
+    }
+
+    /* Hardware GPU Layer Promotion to eliminate repaint lag across all devices */
+    .glass-panel,
+    .glass-panel-gold,
+    .glass-panel-rose,
+    .glass-panel-emerald,
+    .glass-navbar,
+    .menu-card,
+    .gallery-card,
+    .arch-card,
+    .arch-img {
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    /* Mobile shader optimization: streamline backdrop blur for high refresh rate phones & tablets */
+    @media (max-width: 1024px) {
+      .glass-panel,
+      .glass-panel-gold,
+      .glass-panel-rose,
+      .glass-panel-emerald {
+        backdrop-filter: blur(6px) !important;
+        -webkit-backdrop-filter: blur(6px) !important;
+      }
+      .glass-navbar {
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+      }
     }
 
     * {
@@ -3356,7 +3419,56 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- JAVASCRIPT                                                  -->
   <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Lenis Buttery Smooth Scrolling Engine CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
   <script>
+    // ─── Buttery Smooth Scrolling Engine (Lenis v1.1.18) ─────────────
+    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+    const lenis = new Lenis({
+      duration: 1.25,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Silky exponential glide
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      syncTouch: true,           // Buttery smooth momentum on touch screens (mobile & tablet)
+      syncTouchLerp: 0.08,       // Natural touch velocity interpolation
+      touchMultiplier: 1.15,     // Responsiveness multiplier
+      wheelMultiplier: 1.0,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Smooth scroll for all internal anchor links (nav, hero CTA buttons, footer links)
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', (e) => {
+        const targetId = anchor.getAttribute('href');
+        if (!targetId || targetId === '#' || targetId === '#!') return;
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          if (menuOpen && mobileMenu) {
+            menuOpen = false;
+            mobileMenu.style.maxHeight = '0';
+            if (bar1) bar1.style.transform = '';
+            if (bar2) bar2.style.opacity = '1';
+            if (bar3) bar3.style.transform = '';
+          }
+          lenis.scrollTo(targetEl, {
+            offset: -75,
+            duration: 1.25,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          });
+        }
+      });
+    });
+
     // ─── Mobile Menu Toggle ─────────────────────────────────────
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -3627,6 +3739,7 @@
         box.classList.add('scale-100');
       }
       document.body.style.overflow = 'hidden';
+      if (typeof lenis !== 'undefined') lenis.stop();
     }
 
     function closeGalleryModal() {
@@ -3638,6 +3751,7 @@
         box.classList.add('scale-95');
       }
       document.body.style.overflow = '';
+      if (typeof lenis !== 'undefined') lenis.start();
     }
 
     galleryCards.forEach(card => {
@@ -3681,64 +3795,61 @@
       window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${message}`, '_blank');
     });
 
-    // ─── Nav Background Enhancement on Scroll ───────────────────
+    // ─── Nav Background Enhancement on Scroll (Hooked into Lenis Engine) ───
     const navbar = document.getElementById('navbar');
-    let ticking = false;
-
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          if (window.scrollY > 60) {
-            navbar.classList.add('shadow-md', 'bg-[#EBE0F8]/95', 'border-b', 'border-[#B896C8]/40');
-          } else {
-            navbar.classList.remove('shadow-md', 'bg-[#EBE0F8]/95', 'border-b', 'border-[#B896C8]/40');
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-
-    // ─── White Glassmorphic Trailing Aura Controller (GPU Optimized) ────────
-    const glassCursor = document.getElementById('glass-cursor');
-    let cursorX = window.innerWidth / 2;
-    let cursorY = window.innerHeight / 2;
-    let targetX = cursorX;
-    let targetY = cursorY;
-    let isMoving = false;
-
-    window.addEventListener('mousemove', (e) => {
-      targetX = e.clientX;
-      targetY = e.clientY;
-      if (!isMoving) {
-        isMoving = true;
-        requestAnimationFrame(updateCursor);
-      }
-    }, { passive: true });
-
-    function updateCursor() {
-      const dx = targetX - cursorX;
-      const dy = targetY - cursorY;
-      cursorX += dx * 0.22;
-      cursorY += dy * 0.22;
-      if (glassCursor) {
-        glassCursor.style.transform = `translate3d(${cursorX - 18}px, ${cursorY - 18}px, 0)`;
-      }
-      if (Math.abs(dx) > 0.1 || Math.abs(dy) > 0.1) {
-        requestAnimationFrame(updateCursor);
+    function updateNavbar(scrollY) {
+      if (scrollY > 50) {
+        navbar.classList.add('shadow-md', 'bg-[#EBE0F8]/95', 'border-b', 'border-[#B896C8]/40');
       } else {
-        isMoving = false;
+        navbar.classList.remove('shadow-md', 'bg-[#EBE0F8]/95', 'border-b', 'border-[#B896C8]/40');
       }
     }
-
-    document.querySelectorAll('a, button, input, textarea, [role="button"], .nav-link, .cursor-pointer').forEach(elem => {
-      elem.addEventListener('mouseenter', () => {
-        if (glassCursor) glassCursor.classList.add('cursor-interactive');
-      });
-      elem.addEventListener('mouseleave', () => {
-        if (glassCursor) glassCursor.classList.remove('cursor-interactive');
-      });
+    lenis.on('scroll', (e) => {
+      updateNavbar(typeof e.scroll === 'number' ? e.scroll : window.scrollY);
     });
+
+    // ─── White Glassmorphic Trailing Aura Controller (Fine Pointers Only) ───
+    if (window.matchMedia('(pointer: fine)').matches) {
+      const glassCursor = document.getElementById('glass-cursor');
+      let cursorX = window.innerWidth / 2;
+      let cursorY = window.innerHeight / 2;
+      let targetX = cursorX;
+      let targetY = cursorY;
+      let isMoving = false;
+
+      window.addEventListener('mousemove', (e) => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+        if (!isMoving) {
+          isMoving = true;
+          requestAnimationFrame(updateCursor);
+        }
+      }, { passive: true });
+
+      function updateCursor() {
+        const dx = targetX - cursorX;
+        const dy = targetY - cursorY;
+        cursorX += dx * 0.22;
+        cursorY += dy * 0.22;
+        if (glassCursor) {
+          glassCursor.style.transform = `translate3d(${cursorX - 18}px, ${cursorY - 18}px, 0)`;
+        }
+        if (Math.abs(dx) > 0.1 || Math.abs(dy) > 0.1) {
+          requestAnimationFrame(updateCursor);
+        } else {
+          isMoving = false;
+        }
+      }
+
+      document.querySelectorAll('a, button, input, textarea, [role="button"], .nav-link, .cursor-pointer').forEach(elem => {
+        elem.addEventListener('mouseenter', () => {
+          if (glassCursor) glassCursor.classList.add('cursor-interactive');
+        });
+        elem.addEventListener('mouseleave', () => {
+          if (glassCursor) glassCursor.classList.remove('cursor-interactive');
+        });
+      });
+    }
   </script>
 
 </body>
