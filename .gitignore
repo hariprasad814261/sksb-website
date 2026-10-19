@@ -12,3 +12,18 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Area & staging folders
+area/
+areas/
+*area*
+
+# Large uncompressed raw assets & backup archives
+brand assets/raw_originals_backup/
+brand assets/IMG-20260828-WA*.jpg
+brand assets/*_original.*
+brand assets/*_orig.*
+brand assets/*_highres.*
+brand assets/*_preview.html
+brand assets/halwa_option1.jpg
+brand assets/insideview-3.png
