@@ -961,6 +961,29 @@
       border-color: rgba(255, 255, 255, 1);
       box-shadow: 0 0 28px rgba(255, 255, 255, 0.95), 0 0 16px rgba(168, 128, 240, 0.45);
     }
+  
+    /* Image containment guardrails (prevents any enlarged/stretched image blowout) */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .arch-img {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .arch-img img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block;
+    }
+    .menu-card {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
   </style>
   <link rel="preload" as="image" href="brand assets/cake-1.webp" type="image/webp" fetchpriority="high" />
 </head>
@@ -1468,7 +1491,7 @@
             <img src="brand assets/outsideview.webp"
               alt="Sri Kailai Sweets and Bakery store outside view in Kundrathur"
               width="742" height="433" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              loading="lazy" / decoding="async" />
+              loading="lazy" decoding="async" />
           </div>
           <div class="p-6 sm:p-7 lg:p-8 space-y-3">
             <div class="w-12 h-12 rounded-full bg-rose-500/20 flex items-center justify-center text-[#88183A] border border-rose-400/30">
@@ -1494,7 +1517,7 @@
             <img src="brand assets/insideviewshop-1.webp"
               alt="Sri Kailai store interior display counter"
               width="617" height="385" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              loading="lazy" / decoding="async" />
+              loading="lazy" decoding="async" />
           </div>
           <div class="p-6 sm:p-7 lg:p-8 space-y-3">
             <div class="w-12 h-12 rounded-full bg-amber-500/20 flex items-center justify-center text-[#804800] border border-amber-400/30">
@@ -1513,7 +1536,7 @@
             <img src="brand assets/insideviewshop-2.webp"
               alt="Sri Kailai Sweets and Bakery fresh sweets counter"
               width="826" height="470" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              loading="lazy" / decoding="async" />
+              loading="lazy" decoding="async" />
           </div>
           <div class="p-6 sm:p-7 lg:p-8 space-y-3">
             <div class="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center text-[#0A5E36] border border-emerald-400/30">
@@ -1569,13 +1592,13 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="menu-grid">
 
         <!-- Item 1: Veg Puff -->
-        <article class="menu-card reveal group glass-panel-gold arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="hot-bakery">
+        <div class="menu-card reveal group glass-panel-gold arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="hot-bakery">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
               <img src="brand assets/veg-puff.webp"
                 alt="Chennai Veg Puff — Golden flaky triangular pastry with spiced vegetable filling and dip at Sri Kailai Bakery Kundrathur"
                 width="600" height="400" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy" / decoding="async" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -1599,13 +1622,13 @@
         </div>
 
         <!-- Item 2: Egg Puff -->
-        <article class="menu-card reveal reveal-delay-1 group glass-panel-rose arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="hot-bakery">
+        <div class="menu-card reveal reveal-delay-1 group glass-panel-rose arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="hot-bakery">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
               <img src="brand assets/egg-puff.webp"
                 alt="Egg Puff Masala Roasted — Golden flaky square puff pastry with spiced boiled egg at Sri Kailai Bakery Kundrathur"
                 width="768" height="576" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy" / decoding="async" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -1629,13 +1652,13 @@
         </div>
 
         <!-- Item 3: Onion Mini Samosa -->
-        <article class="menu-card reveal reveal-delay-2 group glass-panel-emerald arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="hot-bakery">
+        <div class="menu-card reveal reveal-delay-2 group glass-panel-emerald arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="hot-bakery">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
               <img src="brand assets/mini-samosa.webp"
                 alt="Crispy Onion Mini Samosa tea kadai vengaya samosa on banana leaf — Sri Kailai Kundrathur"
                 width="1200" height="900" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy" / decoding="async" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -1663,13 +1686,13 @@
         <!-- ───────────────────────────────────────────────────────── -->
 
         <!-- Item 4: Ghee Mysore Pak -->
-        <article class="menu-card reveal group glass-panel-gold arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="traditional-sweets">
+        <div class="menu-card reveal group glass-panel-gold arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="traditional-sweets">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
               <img src="brand assets/ghee-mysore-pak.webp"
                 alt="Sri Kailai Pure Ghee Mysore Pak — Golden melt-in-the-mouth traditional South Indian sweet on brass plate"
                 width="799" height="599" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy" / decoding="async" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -1697,13 +1720,13 @@
         </div>
 
         <!-- Item 5: Motichoor Laddu -->
-        <article class="menu-card reveal reveal-delay-1 group glass-panel-rose arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="traditional-sweets">
+        <div class="menu-card reveal reveal-delay-1 group glass-panel-rose arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="traditional-sweets">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
               <img src="brand assets/motichoor-laddu.webp"
                 alt="Royal Motichoor Laddu with saffron boondi pearls and pistachios in pure desi ghee — Sri Kailai Kundrathur"
                 width="736" height="552" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy" / decoding="async" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -1731,13 +1754,13 @@
         </div>
 
         <!-- Item 6: Tirunelveli Wheat Halwa -->
-        <article class="menu-card reveal reveal-delay-2 group glass-panel-emerald arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="traditional-sweets">
+        <div class="menu-card reveal reveal-delay-2 group glass-panel-emerald arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="traditional-sweets">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
               <img src="brand assets/tirunelveli-wheat-halwa.webp"
                 alt="Tirunelveli Wheat Halwa on banana leaf with golden cashews in pure desi ghee — Sri Kailai Kundrathur"
                 width="826" height="619" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy" / decoding="async" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -1769,13 +1792,13 @@
         <!-- ───────────────────────────────────────────────────────── -->
 
         <!-- Item 7: Kaju Katli -->
-        <article class="menu-card reveal group glass-panel-gold arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="milk-cashew">
+        <div class="menu-card reveal group glass-panel-gold arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="milk-cashew">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
               <img src="brand assets/kaju-katli.webp"
                 alt="Royal Kaju Katli silver vark cashew diamond sweets arranged on golden platter — Sri Kailai Kundrathur"
                 width="800" height="600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy" / decoding="async" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -1803,13 +1826,13 @@
         </div>
 
         <!-- Item 8: Malai Peda -->
-        <article class="menu-card reveal reveal-delay-1 group glass-panel-rose arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="milk-cashew">
+        <div class="menu-card reveal reveal-delay-1 group glass-panel-rose arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="milk-cashew">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
               <img src="brand assets/kesar-malai-peda.webp"
                 alt="Royal Kesar Malai Peda infused with saffron and garnished with pistachios and gold leaf — Sri Kailai Sweets"
                 width="736" height="552" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy" / decoding="async" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -1837,13 +1860,13 @@
         </div>
 
         <!-- Item 9: Rasmalai -->
-        <article class="menu-card reveal reveal-delay-2 group glass-panel-emerald arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="milk-cashew">
+        <div class="menu-card reveal reveal-delay-2 group glass-panel-emerald arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="milk-cashew">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
               <img src="brand assets/rasmalai.webp"
                 alt="Chilled Saffron Ras Malai spongy chhena discs in rich rabri cream with pistachios and rose petals — Sri Kailai Kundrathur"
                 width="1200" height="900" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy" / decoding="async" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -1875,13 +1898,13 @@
         <!-- ───────────────────────────────────────────────────────── -->
 
         <!-- Item 10: Madras Mixture -->
-        <article class="menu-card reveal group glass-panel-gold arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="savories-kaaram">
+        <div class="menu-card reveal group glass-panel-gold arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="savories-kaaram">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
               <img src="brand assets/madras-mixture.webp"
                 alt="Authentic Madras Mixture with cashews, roasted almonds, peanuts, kara boondi, and curry leaves — Sri Kailai Kundrathur"
                 width="800" height="600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy" / decoding="async" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -1909,13 +1932,13 @@
         </div>
 
         <!-- Item 11: Butter Murukku -->
-        <article class="menu-card reveal reveal-delay-1 group glass-panel-rose arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="savories-kaaram">
+        <div class="menu-card reveal reveal-delay-1 group glass-panel-rose arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="savories-kaaram">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
               <img src="brand assets/butter-murukku.webp"
                 alt="Golden melt-in-mouth Butter Murukku Vennai Murukku in bamboo basket — Sri Kailai Kundrathur"
                 width="800" height="600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy" / decoding="async" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -1943,13 +1966,13 @@
         </div>
 
         <!-- Item 12: Ribbon Pakoda -->
-        <article class="menu-card reveal reveal-delay-2 group glass-panel-emerald arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="savories-kaaram">
+        <div class="menu-card reveal reveal-delay-2 group glass-panel-emerald arch-card rounded-[1.75rem] p-5 flex flex-col justify-between" data-category="savories-kaaram">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
               <img src="brand assets/ribbon-pakoda.webp"
                 alt="Crispy golden-orange Ribbon Pakoda Ola Murukku in bamboo basket — Sri Kailai Kundrathur"
                 width="800" height="600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                loading="lazy" / decoding="async" />
+                loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -2278,7 +2301,7 @@
           data-cake-specs="Multi-Tier 3D Build · 24–48h Advance Booking">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
-              <img src="brand assets/cake-11.webp" alt="Fairytale Princess Castle custom cake in Kundrathur" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" / decoding="async" />
+              <img src="brand assets/cake-11.webp" alt="Fairytale Princess Castle custom cake in Kundrathur" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -2315,7 +2338,7 @@
           data-cake-specs="2-Tier Architecture · 2 Kg to 4 Kg Builds">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
-              <img src="brand assets/cake-4.webp" alt="Royal White and Gold milestone celebration tier" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" / decoding="async" />
+              <img src="brand assets/cake-4.webp" alt="Royal White and Gold milestone celebration tier" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -2352,7 +2375,7 @@
           data-cake-specs="2-Tier Designer Cake · Custom Topper Included">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
-              <img src="brand assets/cake-12.webp" alt="Two-tier ballerina and flying butterfly celebration cake" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" / decoding="async" />
+              <img src="brand assets/cake-12.webp" alt="Two-tier ballerina and flying butterfly celebration cake" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -2389,7 +2412,7 @@
           data-cake-specs="1.5 Kg to 3 Kg · Custom Luster Tinting Available">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
-              <img src="brand assets/cake-14.webp" alt="Rose gold shimmer cake with 3D butterflies" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" / decoding="async" />
+              <img src="brand assets/cake-14.webp" alt="Rose gold shimmer cake with 3D butterflies" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -2426,7 +2449,7 @@
           data-cake-specs="1 Kg, 2 Kg &amp; Custom Slabs · Farm Fresh Fruits">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
-              <img src="brand assets/cake-3.webp" alt="Exotic fresh fruit overload custom celebration cake" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" / decoding="async" />
+              <img src="brand assets/cake-3.webp" alt="Exotic fresh fruit overload custom celebration cake" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -2463,7 +2486,7 @@
           data-cake-specs="Ultra-Gloss Mirror Glaze · Same-Day / 24h Advance">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
-              <img src="brand assets/cake-8.webp" alt="Strawberry pink mirror glaze cake" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" / decoding="async" />
+              <img src="brand assets/cake-8.webp" alt="Strawberry pink mirror glaze cake" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -2504,7 +2527,7 @@
           data-cake-specs="Completed 1 Kg Birthday Build · Delivered Fresh">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
-              <img src="brand assets/cake-13.webp" alt="Delivered Belgian Black Forest cake project" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" / decoding="async" />
+              <img src="brand assets/cake-13.webp" alt="Delivered Belgian Black Forest cake project" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -2541,7 +2564,7 @@
           data-cake-specs="Completed 1 Kg Celebration Build · Handcrafted Praline">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
-              <img src="brand assets/cake-7.webp" alt="Royal butterscotch praline cake project build" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" / decoding="async" />
+              <img src="brand assets/cake-7.webp" alt="Royal butterscotch praline cake project build" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -2578,7 +2601,7 @@
           data-cake-specs="Completed 2-Tier Project Build · Hand-Piped Florals">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
-              <img src="brand assets/cake-10.webp" alt="Delivered fresh cream pineapple floral cake" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" / decoding="async" />
+              <img src="brand assets/cake-10.webp" alt="Delivered fresh cream pineapple floral cake" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -2615,7 +2638,7 @@
           data-cake-specs="Completed 1 Kg Project Build · French Macaron Topping">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
-              <img src="brand assets/cake-15.webp" alt="Delivered Belgian chocolate truffle cake with macarons" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" / decoding="async" />
+              <img src="brand assets/cake-15.webp" alt="Delivered Belgian chocolate truffle cake with macarons" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -2652,7 +2675,7 @@
           data-cake-specs="Completed 1.5 Kg Celebration Build · Delivered Daily">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
-              <img src="brand assets/cake-1.webp" alt="Golden floral celebration cake previous project" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" / decoding="async" />
+              <img src="brand assets/cake-1.webp" alt="Golden floral celebration cake previous project" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
@@ -2689,7 +2712,7 @@
           data-cake-specs="Completed 2-Tier Order · Delivered with Care">
           <div>
             <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
-              <img src="brand assets/cake-2.webp" alt="Two-tier ivory and gold jubilee cake project" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" / decoding="async" />
+              <img src="brand assets/cake-2.webp" alt="Two-tier ivory and gold jubilee cake project" width="1024" height="1024" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             </div>
             <div class="px-1">
               <div class="flex items-center justify-between mb-1">
