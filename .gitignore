@@ -2,6 +2,7 @@
 *.bak
 *.pre_nav_fix
 *.tmp
+*.pdf
 
 # OS generated files
 .DS_Store

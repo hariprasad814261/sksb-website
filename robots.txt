@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Explicit AI Search Crawlers & LLM Indexing Bots (AEO / GEO)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Disallow sensitive internal build & temporary assets
+Disallow: /temporary screenshots/
+Disallow: /raw_originals_backup/
+
+# XML Sitemap
+Sitemap: https://srikailaisweets.com/sitemap.xml
