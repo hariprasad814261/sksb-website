@@ -763,37 +763,69 @@
       background-color: #804800 !important;
     }
 
-    /* Mobile Drawer Rich Dark Luxury System (Instant, Butter-Smooth Grid Expansion) */
-    #mobile-menu {
-      display: grid;
-      grid-template-rows: 0fr;
+    /* Luxury Brand Preloader (Smooth Image & Asset Rendering) */
+    #site-preloader {
+      pointer-events: auto;
+      will-change: opacity, visibility;
+    }
+    #site-preloader.fade-out {
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
-      transition: grid-template-rows 0.32s cubic-bezier(0.16, 1, 0.3, 1),
-                  opacity 0.26s cubic-bezier(0.16, 1, 0.3, 1),
-                  visibility 0.32s ease;
-      will-change: grid-template-rows, opacity;
+    }
+    .preloader-shimmer-bar {
+      width: 40%;
+      animation: preloaderSlide 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes preloaderSlide {
+      0% { left: -40%; width: 30%; }
+      50% { left: 35%; width: 50%; }
+      100% { left: 100%; width: 30%; }
+    }
+
+    /* Mobile Drawer Rich Dark Luxury System (Hardware-Accelerated Composite Animation & Butter-Smooth Touch Momentum) */
+    #mobile-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-height: calc(100dvh - 72px);
+      max-height: calc(100vh - 72px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
       background: #180928 !important;
       background: linear-gradient(180deg, #1C0D2E 0%, #12051E 100%) !important;
-      border-top: 1px solid rgba(212, 175, 55, 0.4) !important;
-      box-shadow: inset 0 8px 24px rgba(0, 0, 0, 0.45), 0 24px 48px rgba(0, 0, 0, 0.35) !important;
+      border-top: 1px solid rgba(212, 175, 55, 0.45) !important;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translate3d(0, -8px, 0);
+      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                  visibility 0.22s ease;
+      will-change: transform, opacity;
+      z-index: 70;
     }
     #mobile-menu.open {
-      grid-template-rows: 1fr;
       opacity: 1;
       visibility: visible;
       pointer-events: auto;
+      transform: translate3d(0, 0, 0);
     }
     #mobile-menu > .mobile-menu-inner {
-      overflow: hidden;
       min-height: 0;
-      transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
-      transform: translate3d(0, -8px, 0);
-      will-change: transform;
+      padding-bottom: 2.5rem;
     }
-    #mobile-menu.open > .mobile-menu-inner {
-      transform: translate3d(0, 0, 0);
+
+    /* Mobile rendering acceleration */
+    @media (max-width: 768px) {
+      .menu-card, .gallery-card {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 360px;
+      }
     }
 
     #mobile-menu a.mobile-link {
@@ -989,6 +1021,26 @@
 </head>
 
 <body class="ambient-bg text-[#1A0C2B] font-jakarta antialiased leading-[1.65] relative grain-overlay">
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- LUXURY BRAND PRELOADER (Smooth Image & Asset Rendering)     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="site-preloader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#140722] transition-opacity duration-500 ease-out" aria-hidden="false" role="status" aria-live="polite">
+    <div class="relative flex flex-col items-center max-w-xs text-center px-6">
+      <!-- Glowing Logo Shop Frame -->
+      <div class="relative w-24 h-24 mb-5 rounded-3xl bg-white/95 p-2 shadow-[0_8px_32px_rgba(212,175,55,0.35)] ring-2 ring-[#D4AF37]/80 flex items-center justify-center animate-pulse">
+        <img src="brand assets/logo shop.webp" alt="Sri Kailai Sweets &amp; Bakery" width="400" height="286" class="w-full h-full object-contain" />
+      </div>
+      <!-- Brand Typography -->
+      <h2 class="font-marcellus text-2xl font-bold text-white tracking-wide mb-1">Sri Kailai</h2>
+      <p class="text-xs uppercase tracking-[0.25em] text-[#FFE082] font-bold mb-1">Sweets &amp; Bakery</p>
+      <p class="text-[11px] text-[#D8B4FE] font-medium mb-6">ஸ்ரீ கயிலை ஸ்வீட்ஸ் &amp; பேக்கரி • Kundrathur</p>
+      <!-- Luxury Shimmer Progress Bar -->
+      <div class="w-48 h-1 rounded-full bg-white/10 overflow-hidden relative">
+        <div class="preloader-shimmer-bar absolute inset-y-0 left-0 bg-gradient-to-r from-[#D4AF37] via-[#FFE082] to-[#D4AF37] rounded-full"></div>
+      </div>
+      <span class="sr-only">Loading Sri Kailai Sweets &amp; Bakery experience...</span>
+    </div>
+  </div>
   <!-- Accessibility: Skip to Main Content Link (WCAG 2.2 AA) -->
   <a href="#main-content"
     class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-5 focus:py-2.5 focus:bg-[#140722] focus:text-[#FFE082] focus:rounded-xl focus:shadow-2xl focus:outline-none focus:ring-2 focus:ring-[#D4AF37] text-xs font-bold uppercase tracking-wider transition-all">
@@ -1072,7 +1124,7 @@
     </div>
 
     <!-- TIER 2: Main Navigation Bar -->
-    <nav id="navbar" class="w-full glass-navbar transition-all duration-300">
+    <nav id="navbar" class="w-full glass-navbar transition-all duration-300 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
 
         <!-- Logo Shop & Brand Typography -->
@@ -3247,30 +3299,63 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
 
-        <!-- Col 1: Brand, Logo & Bio -->
+        <!-- Col 1: Brand, Logo & Verified Trust Highlights -->
         <div class="md:col-span-1 lg:col-span-5 space-y-4">
           <a href="#home" class="inline-flex items-center gap-3.5 group">
-            <div class="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl overflow-hidden glass-panel p-1.5 shadow-md ring-1 ring-purple-300/40 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 bg-white/80">
+            <div class="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl overflow-hidden glass-panel p-1.5 shadow-md ring-1 ring-purple-300/40 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 bg-white/80 shrink-0">
               <img src="brand assets/logo shop.webp" alt="Sri Kailai Sweets and Bakery Official Logo" width="400" height="286" class="w-full h-full object-contain" />
             </div>
             <div class="flex flex-col">
               <span class="font-marcellus text-2xl sm:text-3xl font-bold text-[#140722] tracking-tight leading-none">Sri Kailai</span>
-              <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#804800] mt-1">Sweets &amp; Bakery</span>
+              <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#804800] mt-1 font-outfit">Sweets &amp; Bakery</span>
               <span class="text-[11px] font-medium text-[#48305E] mt-0.5">ஸ்ரீ கயிலை ஸ்வீட்ஸ் &amp; பேக்கரி</span>
             </div>
           </a>
-          <p class="text-sm text-[#1C0B29] font-medium max-w-sm leading-relaxed">
-            Kundrathur's favorite destination for artisan birthday cakes, signature pastries, and authentic pure-ghee traditional sweets. Open daily: 7:30 AM – 11:30 PM.
+          <p class="text-sm text-[#1C0B29] font-medium max-w-md leading-relaxed">
+            Handcrafting authentic South Indian pure cow-ghee sweets, fresh daily bakery savories, and handcrafted celebration cakes. Dedicated to uncompromising purity, traditional recipes, and warm hospitality in Kundrathur.
           </p>
-          <div class="pt-2 flex flex-wrap items-center gap-3 text-xs font-bold text-[#140722]">
-            <span class="inline-flex items-center gap-1.5"><iconify-icon icon="solar:shield-check-bold"
-                class="text-[#804800]"></iconify-icon> 100% Pure Ghee</span>
-            <span class="text-[#804800]">•</span>
-            <span class="inline-flex items-center gap-1.5"><iconify-icon icon="solar:clock-circle-bold"
-                class="text-[#804800]"></iconify-icon> Daily 7:30 AM – 11:30 PM</span>
-            <span class="text-[#804800]">•</span>
-            <span class="inline-flex items-center gap-1.5 text-[#0A5E36]"><iconify-icon icon="solar:verified-check-bold"
-                class="text-[#0A5E36]"></iconify-icon> Official Store</span>
+
+          <!-- 4-Item Verified Store Highlights (Balanced 2x2 Grid Fills Space Cleanly) -->
+          <div class="grid grid-cols-2 gap-2.5 pt-1 max-w-md">
+            <div class="p-2.5 rounded-xl bg-white/70 border border-[#B896C8]/30 shadow-xs flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-amber-500/15 flex items-center justify-center text-[#804800] shrink-0">
+                <iconify-icon icon="solar:shield-check-bold" width="16" height="16"></iconify-icon>
+              </div>
+              <div class="min-w-0">
+                <span class="block text-xs font-bold text-[#140722] leading-tight">100% Pure Ghee</span>
+                <span class="block text-[10px] text-[#48305E] font-medium truncate">No Dalda, Ever</span>
+              </div>
+            </div>
+
+            <div class="p-2.5 rounded-xl bg-white/70 border border-[#B896C8]/30 shadow-xs flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/15 flex items-center justify-center text-[#0A5E36] shrink-0">
+                <iconify-icon icon="solar:clock-circle-bold" width="16" height="16"></iconify-icon>
+              </div>
+              <div class="min-w-0">
+                <span class="block text-xs font-bold text-[#140722] leading-tight">7:30 AM – 11:30 PM</span>
+                <span class="block text-[10px] text-[#48305E] font-medium truncate">Open 365 Days</span>
+              </div>
+            </div>
+
+            <div class="p-2.5 rounded-xl bg-white/70 border border-[#B896C8]/30 shadow-xs flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-amber-500/15 flex items-center justify-center text-[#804800] shrink-0">
+                <iconify-icon icon="solar:star-bold" width="16" height="16"></iconify-icon>
+              </div>
+              <div class="min-w-0">
+                <span class="block text-xs font-bold text-[#140722] leading-tight">4.9★ Google Rated</span>
+                <span class="block text-[10px] text-[#48305E] font-medium truncate">Loved in Kundrathur</span>
+              </div>
+            </div>
+
+            <div class="p-2.5 rounded-xl bg-white/70 border border-[#B896C8]/30 shadow-xs flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/15 flex items-center justify-center text-[#0A5E36] shrink-0">
+                <iconify-icon icon="solar:verified-check-bold" width="16" height="16"></iconify-icon>
+              </div>
+              <div class="min-w-0">
+                <span class="block text-xs font-bold text-[#140722] leading-tight">Official Store</span>
+                <span class="block text-[10px] text-[#48305E] font-medium truncate">Mehta Nagar Main Rd</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -3571,6 +3656,33 @@
       }
     });
 
+    // ─── Luxury Brand Preloader Controller ────────────────────────
+    const preloader = document.getElementById('site-preloader');
+    let preloaderDismissed = false;
+
+    function dismissPreloader() {
+      if (preloaderDismissed || !preloader) return;
+      preloaderDismissed = true;
+      preloader.classList.add('fade-out');
+      preloader.setAttribute('aria-hidden', 'true');
+      setTimeout(() => {
+        if (preloader && preloader.parentNode) {
+          preloader.parentNode.removeChild(preloader);
+        }
+      }, 550);
+    }
+
+    // Dismiss preloader when critical resources are rendered
+    if (document.readyState === 'complete') {
+      setTimeout(dismissPreloader, 150);
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(dismissPreloader, 200);
+      });
+      // Failsafe safety timeout (never blocks user more than 1.4s)
+      setTimeout(dismissPreloader, 1400);
+    }
+
     // Smooth scroll for all internal anchor links (nav, hero CTA buttons, footer links)
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener('click', (e) => {
@@ -3579,12 +3691,26 @@
         const targetEl = document.querySelector(targetId);
         if (targetEl) {
           e.preventDefault();
-          closeMobileMenu();
-          lenis.scrollTo(targetEl, {
-            offset: -75,
-            duration: 0.6,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-          });
+          if (menuOpen) {
+            closeMobileMenu();
+          }
+          
+          // Accurately compute top scroll offset accounting for the sticky navigation header
+          const header = document.querySelector('header');
+          const navOffset = header ? header.offsetHeight + 10 : 90;
+          const targetY = targetEl.getBoundingClientRect().top + window.pageYOffset - navOffset;
+
+          if (isTouchDevice) {
+            window.scrollTo({
+              top: targetY,
+              behavior: 'smooth'
+            });
+          } else {
+            lenis.scrollTo(targetY, {
+              duration: 0.7,
+              easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            });
+          }
         }
       });
     });
