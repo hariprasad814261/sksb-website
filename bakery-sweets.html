@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bakery &amp; Sweets Counters | Sri Kailai Sweets &amp; Bakery Kundrathur</title>
+  <meta name="description"
+    content="Explore all 12 authentic bakery &amp; sweet specialities at Sri Kailai Sweets Kundrathur. Hot puffs, pure ghee Mysore Pak, Kaju Katli, Madras Mixture &amp; celebration cakes. WhatsApp: 99416 46688." />
+  <meta name="keywords"
+    content="Sri Kailai Sweets, Bakery items Kundrathur, egg puff, veg puff, ghee Mysore Pak, Kaju Katli Chennai, Madras mixture, tea kadai samosa, fresh sweets Kundrathur" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://srikailaisweets.com/bakery-sweets.html" />
+  <link rel="icon" type="image/webp" href="brand assets/logo shop.webp" />
+  <link rel="apple-touch-icon" href="brand assets/logo shop.webp" />
+
+  <meta name="theme-color" content="#D4BDF0" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Lenis CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Iconify Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" defer></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            marcellus: ['"Marcellus"', 'Georgia', 'serif'],
+            playfair: ['"Playfair Display"', 'Georgia', 'serif'],
+            jakarta: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            outfit: ['"Outfit"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --color-brand-purple: #3B0764;
+      --color-brand-lavender: #D4BDF0;
+      --color-brand-border: #B896C8;
+      --color-brand-gold: #D4AF37;
+      --color-brand-gold-warm: #E5C378;
+      --color-brand-amber: #804800;
+      --color-brand-emerald: #0A5E36;
+    }
+
+    ::selection {
+      background-color: #B896C8;
+      color: #1E122A;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translate3d(0, 20px, 0);
+      will-change: opacity, transform;
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    .reveal-delay-1 { transition-delay: 100ms !important; }
+    .reveal-delay-2 { transition-delay: 200ms !important; }
+    .reveal-delay-3 { transition-delay: 300ms !important; }
+
+    .nav-link {
+      position: relative;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #221035 !important;
+      white-space: nowrap;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover, .nav-link.active-page {
+      color: #7A550A !important;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 2.5px;
+      background: linear-gradient(90deg, #D4AF37, #9B6BAA);
+      border-radius: 9999px;
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav-link:hover::after, .nav-link.active-page::after {
+      width: 100%;
+      left: 0;
+    }
+
+    html {
+      scroll-padding-top: 5.5rem;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: clip;
+      touch-action: pan-y;
+    }
+    body {
+      overflow-x: clip;
+    }
+
+    .glass-navbar {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(184, 150, 200, 0.35);
+      box-shadow: 0 4px 20px -2px rgba(59, 7, 100, 0.07);
+    }
+
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 10px 30px -5px rgba(59, 7, 100, 0.08);
+    }
+    .glass-panel-gold {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(253, 248, 237, 0.88) 100%);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(229, 195, 120, 0.6);
+      box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.15);
+    }
+    .glass-panel-rose {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 245, 247, 0.88) 100%);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(244, 114, 182, 0.5);
+      box-shadow: 0 10px 30px -5px rgba(219, 39, 119, 0.12);
+    }
+    .glass-panel-emerald {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(240, 253, 244, 0.88) 100%);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(52, 211, 153, 0.5);
+      box-shadow: 0 10px 30px -5px rgba(5, 150, 105, 0.12);
+    }
+    .glass-pill {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(184, 150, 200, 0.4);
+    }
+
+    .ambient-bg {
+      background-color: #D4BDF0;
+      background-image: 
+        radial-gradient(circle at 12% 18%, rgba(229, 195, 120, 0.32) 0%, transparent 45%),
+        radial-gradient(circle at 88% 22%, rgba(206, 170, 235, 0.60) 0%, transparent 50%),
+        radial-gradient(circle at 82% 75%, rgba(217, 136, 106, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 20% 85%, rgba(158, 115, 235, 0.30) 0%, transparent 50%);
+    }
+    .ambient-section {
+      background-color: rgba(212, 189, 240, 0.55);
+      background-image:
+        radial-gradient(circle at 75% 25%, rgba(217, 136, 106, 0.14) 0%, transparent 42%),
+        radial-gradient(circle at 25% 75%, rgba(229, 195, 120, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.08) 0%, transparent 55%);
+    }
+
+    .arch-img {
+      border-radius: 999px 999px 18px 18px !important;
+      overflow: hidden !important;
+      border: 2px solid rgba(255, 255, 255, 0.92);
+      box-shadow: 0 14px 36px -6px rgba(58, 29, 86, 0.28);
+      transition: all 0.5s cubic-bezier(0.2, 0, 0, 1);
+    }
+    .arch-card {
+      border-radius: 48px 48px 24px 24px !important;
+      overflow: hidden;
+    }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Mobile Drawer */
+    #mobile-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-height: calc(100dvh - 72px);
+      max-height: calc(100vh - 72px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+      background: linear-gradient(180deg, #1C0D2E 0%, #12051E 100%) !important;
+      border-top: 1px solid rgba(212, 175, 55, 0.45) !important;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55) !important;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translate3d(0, -8px, 0);
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+      z-index: 70;
+    }
+    #mobile-menu.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translate3d(0, 0, 0);
+    }
+    #mobile-menu > .mobile-menu-inner {
+      min-height: 0;
+      padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 24px)) !important;
+    }
+    #mobile-menu a.mobile-link {
+      color: #FAF5FF !important;
+      border-radius: 8px;
+      padding: 4px 6px;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+    #mobile-menu a.mobile-link:hover {
+      color: #FFE082 !important;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Floating WhatsApp Button Hide on Menu Open */
+    body.mobile-menu-open #floating-whatsapp-fab,
+    #mobile-menu.open ~ #floating-whatsapp-fab {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+      transform: scale(0.6) !important;
+    }
+  </style>
+</head>
+
+<body class="ambient-bg text-[#140722] font-jakarta antialiased selection:bg-[#B896C8] selection:text-[#1E122A]">
+
+  <!-- SITE HEADER & TWO-TIER NAVIGATION -->
+  <header class="sticky top-0 z-50 w-full shadow-sm transition-all duration-300">
+    <!-- TIER 1: Top Contact & Store Hours Bar -->
+    <div class="w-full bg-[#1A0C2B] border-b border-[#D4AF37]/30 text-white text-[11px] font-outfit py-1.5 px-4 sm:px-8">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+          <span class="inline-flex items-center gap-1.5 text-[#FFE082] font-semibold">
+            <iconify-icon icon="solar:map-point-bold" class="text-[#FFD24D]" width="13" height="13"></iconify-icon>
+            <span>Kundrathur, Chennai</span>
+          </span>
+          <span class="text-white/40 hidden sm:inline">•</span>
+          <span class="hidden sm:inline-flex items-center gap-1.5 text-purple-200">
+            <iconify-icon icon="solar:clock-circle-bold" class="text-[#FFD24D]" width="13" height="13"></iconify-icon>
+            <span>7:30 AM – 11:30 PM Daily</span>
+          </span>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="tel:04461320360" class="hidden xl:inline-flex items-center gap-1 text-purple-200 hover:text-white transition-colors" title="Landline: 044 61320360">
+            <iconify-icon icon="solar:phone-bold" class="text-emerald-400" width="12" height="12"></iconify-icon>
+            <span>044 61320360</span>
+          </a>
+          <a href="tel:+919941646688" class="hidden md:inline-flex items-center gap-1 text-purple-200 hover:text-white transition-colors" title="Store Mobile: 99416 46688">
+            <iconify-icon icon="solar:phone-calling-bold" class="text-[#FFD24D]" width="12" height="12"></iconify-icon>
+            <span>99416 46688</span>
+          </a>
+          <span class="text-white/40 hidden md:inline">•</span>
+          <a href="tel:+917358088816"
+            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-[#D4AF37]/30 to-[#E5C378]/20 border border-[#FFD24D]/60 text-[#FFE082] hover:bg-[#FFD24D] hover:text-[#180A28] font-bold shadow-xs transition-all"
+            title="Helpline: 073580 88816">
+            <iconify-icon icon="solar:phone-calling-bold" class="text-[#FFD24D]" width="13" height="13"></iconify-icon>
+            <span>073580 88816</span>
+          </a>
+          <span class="text-white/40 hidden sm:inline">•</span>
+          <a href="https://www.instagram.com/srikailai_69?xtok=MWZlNGZyYXAybjBiMg%3D%3D" target="_blank" rel="noopener"
+            class="hidden sm:inline-flex items-center gap-1 text-[#FFA0D2] hover:text-white font-bold transition-colors"
+            title="Instagram: @srikailai_69">
+            <iconify-icon icon="lucide:instagram" width="13" height="13"></iconify-icon>
+            <span>@srikailai_69</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 2: Main Navigation Bar -->
+    <nav id="navbar" class="w-full glass-navbar transition-all duration-300 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+
+        <!-- Logo Shop & Brand Typography -->
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3 shrink-0 group" aria-label="Sri Kailai — Home">
+          <div class="relative w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl overflow-hidden shadow-md ring-1 ring-white/90 shrink-0 bg-white/80 p-1 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+            <img src="brand assets/logo shop.webp" alt="Sri Kailai Sweets and Bakery Official Logo" width="400" height="286" class="w-full h-full object-contain" />
+          </div>
+          <div class="flex flex-col shrink-0 justify-center">
+            <span class="font-playfair text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold text-[#221035] tracking-tight leading-none whitespace-nowrap">Sri Kailai</span>
+            <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-[#7A550A] mt-0.5 sm:mt-1 whitespace-nowrap">Sweets &amp; Bakery</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex items-center gap-2 xl:gap-4 2xl:gap-6 shrink-0">
+          <a href="index.html#about"
+            class="nav-link whitespace-nowrap text-[12.5px] xl:text-[14px] 2xl:text-[14.5px] font-bold tracking-wide text-[#221035] hover:text-[#7A550A] transition-colors duration-300">Experience</a>
+          
+          <a href="bakery-sweets.html"
+            class="nav-link active-page whitespace-nowrap text-[12.5px] xl:text-[14px] 2xl:text-[14.5px] font-bold tracking-wide text-[#804800] transition-colors duration-300">Bakery &amp; Sweets</a>
+
+          <a href="events-catering.html"
+            class="nav-link whitespace-nowrap text-[12.5px] xl:text-[14px] 2xl:text-[14.5px] font-bold tracking-wide text-[#221035] hover:text-[#7A550A] transition-colors duration-300 flex items-center gap-1.5 group">
+            <span>Event Management</span>
+            <span class="text-[9px] bg-gradient-to-r from-[#D4AF37] to-[#C68B59] text-white font-extrabold px-1.5 py-0.5 rounded-full uppercase tracking-wider shadow-xs">New</span>
+          </a>
+
+          <a href="index.html#reviews"
+            class="nav-link whitespace-nowrap text-[12.5px] xl:text-[14px] 2xl:text-[14.5px] font-bold tracking-wide text-[#221035] hover:text-[#7A550A] transition-colors duration-300">Reviews</a>
+
+          <a href="index.html#gallery"
+            class="nav-link whitespace-nowrap text-[12.5px] xl:text-[14px] 2xl:text-[14.5px] font-bold tracking-wide text-[#221035] hover:text-[#7A550A] transition-colors duration-300">Gallery</a>
+
+          <a href="index.html#contact"
+            class="nav-link whitespace-nowrap text-[12.5px] xl:text-[14px] 2xl:text-[14.5px] font-bold tracking-wide text-[#221035] hover:text-[#7A550A] transition-colors duration-300">Kundrathur Store</a>
+        </div>
+
+        <!-- Action Buttons (Right) -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+          <!-- Call Us Dropdown Button -->
+          <div class="relative" id="call-dropdown-container">
+            <button type="button" id="call-dropdown-btn" aria-expanded="false" aria-haspopup="true"
+              class="inline-flex items-center gap-1 sm:gap-1.5 h-9 sm:h-10 px-2.5 sm:px-3.5 rounded-full bg-white hover:bg-[#FAF6FD] text-[#221035] hover:text-[#804800] border border-[#B896C8]/50 shadow-xs hover:border-[#D4AF37] hover:shadow-sm transition-all duration-300 font-outfit font-bold text-xs cursor-pointer select-none active:scale-95">
+              <span class="w-5 h-5 rounded-full bg-emerald-500/15 flex items-center justify-center text-[#0A5E36] shrink-0">
+                <iconify-icon icon="solar:phone-calling-bold" width="12" height="12"></iconify-icon>
+              </span>
+              <span class="font-bold">Call Us</span>
+              <iconify-icon id="call-chevron" icon="solar:alt-arrow-down-linear" width="11" height="11" class="text-[#7A550A] transition-transform duration-300"></iconify-icon>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div id="call-dropdown-menu"
+              class="fixed sm:absolute left-3 right-3 sm:left-auto sm:right-0 top-20 sm:top-full mt-2 w-auto sm:w-[380px] sm:max-w-[calc(100vw-1.5rem)] bg-white rounded-2xl border-2 border-[#D4AF37]/60 shadow-[0_24px_60px_rgba(26,14,40,0.32)] opacity-0 pointer-events-none translate-y-2 transition-all duration-250 z-[100] overflow-hidden">
+              <div class="bg-gradient-to-r from-[#1E0D2E] via-[#2A123F] to-[#1E0D2E] text-white p-3.5 flex items-center justify-between border-b border-[#D4AF37]/35">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#E5C378] flex items-center justify-center text-[#1A0C2B] shrink-0 shadow-sm font-bold">
+                    <iconify-icon icon="solar:phone-calling-bold" width="16" height="16"></iconify-icon>
+                  </div>
+                  <div>
+                    <span class="block text-xs font-bold uppercase tracking-wider text-[#FFE082]">Sri Kailai Helplines</span>
+                    <p class="text-[10px] text-[#E0D0F0] font-medium mt-0.5">Direct Call &amp; Inquiries • Open 7:30 AM – 11:30 PM</p>
+                  </div>
+                </div>
+                <button type="button" id="close-call-menu" class="text-white/70 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors cursor-pointer" aria-label="Close contact menu">
+                  <iconify-icon icon="solar:close-circle-bold" width="20" height="20"></iconify-icon>
+                </button>
+              </div>
+
+              <div class="p-3 space-y-2.5 bg-white">
+                <div class="flex items-center justify-between p-2.5 rounded-xl bg-emerald-50/70 border border-emerald-200/80">
+                  <div class="min-w-0 pr-2">
+                    <span class="text-sm font-extrabold text-[#140722] block">073580 88816</span>
+                    <span class="text-[11px] font-medium text-[#0A5E36] block truncate">Event Orders &amp; Catering Helpline</span>
+                  </div>
+                  <a href="tel:+917358088816" class="inline-flex items-center gap-1 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 px-3.5 py-1.5 rounded-full shadow-xs">Call</a>
+                </div>
+                <div class="flex items-center justify-between p-2.5 rounded-xl bg-amber-50/70 border border-amber-200/80">
+                  <div class="min-w-0 pr-2">
+                    <span class="text-sm font-extrabold text-[#140722] block">99416 46688</span>
+                    <span class="text-[11px] font-medium text-[#655077] block truncate">Store Mobile / WhatsApp Orders</span>
+                  </div>
+                  <a href="tel:+919941646688" class="inline-flex items-center gap-1 text-xs font-bold text-white bg-[#804800] hover:bg-[#613600] px-3.5 py-1.5 rounded-full shadow-xs">Call</a>
+                </div>
+                <div class="flex items-center justify-between p-2.5 rounded-xl bg-purple-50/60 border border-purple-200/70">
+                  <div class="min-w-0 pr-2">
+                    <span class="text-sm font-extrabold text-[#140722] block">044 61320360</span>
+                    <span class="text-[11px] font-medium text-[#655077] block truncate">Kundrathur Shop Landline</span>
+                  </div>
+                  <a href="tel:04461320360" class="inline-flex items-center gap-1 text-xs font-bold text-white bg-[#36154F] hover:bg-[#250d37] px-3.5 py-1.5 rounded-full shadow-xs">Call</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order on WhatsApp -->
+          <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20like%20to%20order%20fresh%20sweets%20and%20bakery%20delights."
+            target="_blank" rel="noopener"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0 h-10 w-10 sm:w-auto px-0 sm:px-4.5 rounded-full bg-gradient-to-r from-[#D4AF37] via-[#E5C378] to-[#C68B59] hover:from-[#E5C378] hover:to-[#D4AF37] text-[#14111E] text-xs sm:text-[13px] font-bold font-outfit shadow-[0_4px_16px_rgba(229,195,120,0.35)] active:scale-95 transition-all duration-300 cursor-pointer"
+            title="Order on WhatsApp">
+            <iconify-icon icon="ic:baseline-whatsapp" width="18" height="18"></iconify-icon>
+            <span class="hidden sm:inline font-bold">Order on WhatsApp</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="menu-toggle" type="button"
+            class="lg:hidden flex flex-col items-center justify-center gap-1.5 w-11 h-11 p-2 rounded-xl bg-white/95 hover:bg-white border border-[#B896C8]/50 shadow-sm cursor-pointer shrink-0 active:scale-90 transition-transform duration-150 select-none touch-manipulation"
+            aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="block w-5 h-0.5 rounded-full bg-[#221035] origin-center pointer-events-none" id="bar1"></span>
+            <span class="block w-5 h-0.5 rounded-full bg-[#221035] pointer-events-none" id="bar2"></span>
+            <span class="block w-5 h-0.5 rounded-full bg-[#221035] origin-center pointer-events-none" id="bar3"></span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="lg:hidden" aria-hidden="true">
+        <div class="mobile-menu-inner max-w-7xl mx-auto px-6 py-6 flex flex-col gap-4">
+          <!-- Brand Header -->
+          <div class="flex items-center gap-3.5 p-3 rounded-2xl bg-white/[0.08] border border-[#D4AF37]/35 shadow-sm">
+            <div class="w-14 h-14 rounded-xl bg-white/95 p-1 flex items-center justify-center shrink-0 shadow-md">
+              <img src="brand assets/logo shop.webp" alt="Sri Kailai Sweets and Bakery Official Logo" width="400" height="286" class="w-full h-full object-contain" />
+            </div>
+            <div class="flex flex-col">
+              <span class="font-playfair text-lg font-bold text-white leading-tight">Sri Kailai</span>
+              <span class="text-[11px] font-bold text-[#FFE082] uppercase tracking-wider">Sweets &amp; Bakery</span>
+              <span class="text-[10px] text-purple-200 font-medium">Kundrathur • Official Store</span>
+            </div>
+          </div>
+
+          <a href="index.html#about" class="mobile-link text-base text-[#FAF5FF] hover:text-[#FFE082] font-semibold py-1">Experience</a>
+
+          <!-- Mobile Categories Accordion -->
+          <div class="flex flex-col gap-1 py-2 border-y border-[#B896C8]/20 my-1">
+            <a href="bakery-sweets.html" class="mobile-link text-sm font-bold uppercase tracking-wider text-[#FFE082] flex items-center justify-between py-1">
+              <span class="text-[#FFE082]">Bakery &amp; Sweets Counters</span>
+              <span class="text-[0.68rem] lowercase text-[#D8B4FE] font-medium">view full page (12)</span>
+            </a>
+            <a href="#hot-bakery" class="mobile-link text-xs text-[#FAF5FF] hover:text-[#FFE082] pl-3 py-1 flex items-center justify-between">
+              <span>• Hot Bakery Counter</span>
+              <span class="text-[0.65rem] text-[#D8B4FE]">Veg &amp; Egg Puffs, Samosas</span>
+            </a>
+            <a href="#traditional-sweets" class="mobile-link text-xs text-[#FAF5FF] hover:text-[#FFE082] pl-3 py-1 flex items-center justify-between">
+              <span>• Traditional Sweets</span>
+              <span class="text-[0.65rem] text-[#D8B4FE]">Mysore Pak, Laddu, Halwa</span>
+            </a>
+            <a href="#milk-cashew" class="mobile-link text-xs text-[#FAF5FF] hover:text-[#FFE082] pl-3 py-1 flex items-center justify-between">
+              <span>• Milk &amp; Cashew Sweets</span>
+              <span class="text-[0.65rem] text-[#D8B4FE]">Kaju Katli, Peda, Rasmalai</span>
+            </a>
+            <a href="#savories-kaaram" class="mobile-link text-xs text-[#FAF5FF] hover:text-[#FFE082] pl-3 py-1 flex items-center justify-between">
+              <span>• Savories &amp; Kaaram</span>
+              <span class="text-[0.65rem] text-[#D8B4FE]">Madras Mixture, Murukku</span>
+            </a>
+          </div>
+
+          <a href="events-catering.html"
+            class="mobile-link text-base font-bold text-[#FFE082] hover:text-white py-1.5 flex items-center justify-between border-b border-[#B896C8]/15">
+            <span class="flex items-center gap-2.5">
+              <span class="w-6 h-6 rounded-lg bg-[#E5C378]/20 flex items-center justify-center text-[#FFE082]">
+                <iconify-icon icon="solar:crown-star-bold" width="15" height="15"></iconify-icon>
+              </span>
+              <span class="text-[#FFE082]">Event Management &amp; Catering</span>
+            </span>
+            <span class="text-[10px] bg-gradient-to-r from-[#D4AF37] to-[#C68B59] text-[#14111E] px-2 py-0.5 rounded-full uppercase tracking-wider font-extrabold shadow-xs">New</span>
+          </a>
+
+          <a href="index.html#reviews" class="mobile-link text-base font-bold text-[#FAF5FF] hover:text-[#FFE082] py-1">Customer Reviews</a>
+          <a href="index.html#gallery" class="mobile-link text-base font-bold text-[#FAF5FF] hover:text-[#FFE082] py-1">Gallery</a>
+          <a href="index.html#contact" class="mobile-link text-base font-bold text-[#FAF5FF] hover:text-[#FFE082] py-1">Kundrathur Store</a>
+
+          <!-- Compact 2-Column Contact Actions -->
+          <div class="pt-2 border-t border-[#B896C8]/20 flex flex-col gap-2">
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div class="col-span-2 inline-flex items-center gap-2 text-xs font-bold text-[#FFE082] p-2 rounded-xl bg-white/[0.08] border border-amber-400/30">
+                <iconify-icon icon="solar:clock-circle-bold" width="16" height="16" class="text-amber-400 shrink-0"></iconify-icon>
+                <span>Daily: 7:30 AM – 11:30 PM</span>
+              </div>
+              <a href="tel:04461320360" class="inline-flex items-center gap-1.5 text-xs font-bold text-white p-2 rounded-xl bg-white/[0.08] border border-white/20">
+                <iconify-icon icon="solar:phone-bold" width="15" height="15" class="text-emerald-400 shrink-0"></iconify-icon>
+                <span class="truncate">044 61320360</span>
+              </a>
+              <a href="tel:+919941646688" class="inline-flex items-center gap-1.5 text-xs font-bold text-white p-2 rounded-xl bg-white/[0.08] border border-white/20">
+                <iconify-icon icon="solar:phone-calling-bold" width="15" height="15" class="text-amber-400 shrink-0"></iconify-icon>
+                <span class="truncate">99416 46688</span>
+              </a>
+              <a href="tel:+917358088816" class="inline-flex items-center gap-1.5 text-xs font-bold text-white p-2 rounded-xl bg-white/[0.08] border border-white/20">
+                <iconify-icon icon="solar:phone-calling-bold" width="15" height="15" class="text-emerald-400 shrink-0"></iconify-icon>
+                <span class="truncate">073580 88816</span>
+              </a>
+              <a href="https://www.instagram.com/srikailai_69?xtok=MWZlNGZyYXAybjBiMg%3D%3D" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-bold text-pink-300 p-2 rounded-xl bg-white/[0.08] border border-white/20">
+                <iconify-icon icon="lucide:instagram" width="15" height="15" class="text-pink-400 shrink-0"></iconify-icon>
+                <span class="truncate">@srikailai_69</span>
+              </a>
+            </div>
+
+            <!-- Prominent Unobstructed WhatsApp Button -->
+            <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20like%20to%20order%20fresh%20sweets%20and%20bakery%20delights."
+              target="_blank" rel="noopener"
+              class="w-full flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#D4AF37] via-[#E5C378] to-[#C68B59] hover:from-[#E5C378] hover:to-[#D4AF37] text-[#14111E] text-sm font-extrabold px-6 py-3.5 rounded-full shadow-[0_6px_24px_rgba(229,195,120,0.4)] active:scale-95 transition-all duration-300 cursor-pointer mt-2 mb-2">
+              <iconify-icon icon="ic:baseline-whatsapp" width="20" height="20"></iconify-icon>
+              <span class="whitespace-nowrap font-bold text-[#14111E]">Order on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+    <!-- PAGE HERO HEADER -->
+    <section class="relative pt-8 sm:pt-12 pb-6 sm:pb-8 overflow-hidden border-b border-[#B896C8]/25">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="reveal inline-flex items-center gap-2 glass-pill bg-white/80 text-[#804800] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full border border-[#804800]/30 shadow-sm mb-4">
+          <iconify-icon icon="solar:cup-star-bold" width="15" height="15" class="text-[#D4AF37]"></iconify-icon>
+          <span>Fresh From Kundrathur Ovens • 100% Pure Ghee</span>
+        </div>
+        <h1 class="reveal reveal-delay-1 font-marcellus text-3xl sm:text-5xl lg:text-6xl font-bold text-[#140722] tracking-tight mb-4">
+          The Bakery &amp; <span class="font-playfair italic font-bold text-[#804800]">Sweets Counters</span>
+        </h1>
+        <p class="reveal reveal-delay-2 text-sm sm:text-base lg:text-lg text-[#1C0B29] max-w-2xl mx-auto leading-relaxed font-medium mb-6">
+          From shatteringly crisp 4 PM evening puffs to heritage sweets dripping in 100% pure aroma cow ghee. Prepared fresh every morning, served hot until 11:30 PM on Mehta Nagar Main Road, Kundrathur.
+        </p>
+
+        <!-- Quick Filter Tabs -->
+        <div class="reveal reveal-delay-3 flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-2 no-scrollbar" id="category-tabs" role="tablist">
+          <button type="button" data-filter="all" class="menu-tab-btn active shrink-0 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 bg-gradient-to-r from-[#D4AF37] via-[#E5C378] to-[#C68B59] text-[#14111E] shadow-sm">
+            All Items (12)
+          </button>
+          <button type="button" data-filter="hot-bakery" class="menu-tab-btn shrink-0 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full glass-pill text-[#1C0B29] hover:text-[#804800]">
+            Hot Bakery (3)
+          </button>
+          <button type="button" data-filter="traditional-sweets" class="menu-tab-btn shrink-0 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full glass-pill text-[#1C0B29] hover:text-[#804800]">
+            Traditional Sweets (3)
+          </button>
+          <button type="button" data-filter="milk-cashew" class="menu-tab-btn shrink-0 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full glass-pill text-[#1C0B29] hover:text-[#804800]">
+            Milk &amp; Cashew (3)
+          </button>
+          <button type="button" data-filter="savories-kaaram" class="menu-tab-btn shrink-0 text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full glass-pill text-[#1C0B29] hover:text-[#0A5E36]">
+            Savories &amp; Kaaram (3)
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL 12-ITEM MENU GRID -->
+    <section class="py-8 sm:py-12 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="menu-grid">
+
+          <!-- Item 1: Veg Puff -->
+          <div class="menu-card reveal group glass-panel-gold arch-card p-5 flex flex-col justify-between" data-category="hot-bakery" id="hot-bakery">
+            <div>
+              <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
+                <img src="brand assets/veg-puff.webp" alt="Chennai Veg Puff at Sri Kailai Bakery Kundrathur" width="600" height="400" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[0.7rem] font-bold uppercase tracking-wider text-[#882E10]">Hot Bakery Counter</span>
+                  <span class="text-[0.65rem] font-bold text-amber-900 bg-amber-500/20 px-2 py-0.5 rounded-full">4 PM Oven Fresh</span>
+                </div>
+                <h2 class="font-marcellus text-xl sm:text-[1.35rem] font-bold text-[#140722] mt-1 tracking-tight">Chennai Veg Puff</h2>
+                <p class="text-sm text-[#160824] mt-2 mb-4 leading-relaxed font-medium">
+                  Golden-glazed triangular puff pastry with dozens of crisp, buttery laminated layers that shatter at first bite. Packed with slow-roasted spiced potatoes, sweet garden peas, and authentic Madras aromatics.
+                </p>
+              </div>
+            </div>
+            <div class="px-1 pt-3 border-t border-amber-400/35 mt-auto">
+              <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20love%20to%20order%20your%20freshly%20prepared%20Chennai%20Veg%20Puffs.%20Please%20share%20today%27s%20batch%20availability%20and%20pricing.%20Thank%20you!%20🌟"
+                target="_blank" rel="noopener"
+                class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#D4AF37] via-[#E5C378] to-[#C68B59] hover:from-[#E5C378] hover:to-[#D4AF37] text-[#14111E] text-xs font-bold px-4 py-2.5 rounded-full active:scale-95 transition-all duration-300 shadow-sm">
+                <iconify-icon icon="ic:baseline-whatsapp" width="16" height="16"></iconify-icon>
+                <span>Order on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 2: Egg Puff -->
+          <div class="menu-card reveal reveal-delay-1 group glass-panel-rose arch-card p-5 flex flex-col justify-between" data-category="hot-bakery">
+            <div>
+              <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
+                <img src="brand assets/egg-puff.webp" alt="Egg Puff Masala Roasted at Sri Kailai Bakery Kundrathur" width="768" height="576" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[0.7rem] font-bold uppercase tracking-wider text-[#88183A]">Hot Bakery Counter</span>
+                  <span class="text-[0.65rem] font-bold text-rose-900 bg-rose-500/20 px-2 py-0.5 rounded-full">Bakery Classic</span>
+                </div>
+                <h2 class="font-marcellus text-xl sm:text-[1.35rem] font-bold text-[#140722] mt-1 tracking-tight">Egg Puff (Masala Roasted)</h2>
+                <p class="text-sm text-[#160824] mt-2 mb-4 leading-relaxed font-medium">
+                  Square golden puff pastry with dozens of flaky, buttery layers encasing a farm-fresh boiled egg roasted in caramelized shallots, freshly crushed Tellicherry black pepper, and warm aromatic garam masala.
+                </p>
+              </div>
+            </div>
+            <div class="px-1 pt-3 border-t border-rose-400/35 mt-auto">
+              <a href="https://api.whatsapp.com/send?phone=919941646688&text=Hi%20Sri%20Kailai!%20I%27d%20like%20to%20order%20Egg%20Puffs%20(Masala%20Roasted).%20Please%20share%20availability%20and%20pricing."
+                target="_blank" rel="noopener"
+                class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-rose-400 via-rose-300 to-amber-300 text-[#14111E] text-xs font-bold px-4 py-2.5 rounded-full active:scale-95 transition-all duration-300 shadow-sm">
+                <iconify-icon icon="ic:baseline-whatsapp" width="16" height="16"></iconify-icon>
+                <span>Order on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 3: Onion Mini Samosa -->
+          <div class="menu-card reveal reveal-delay-2 group glass-panel-emerald arch-card p-5 flex flex-col justify-between" data-category="hot-bakery">
+            <div>
+              <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
+                <img src="brand assets/mini-samosa.webp" alt="Crispy Onion Mini Samosa Sri Kailai Kundrathur" width="1200" height="900" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[0.7rem] font-bold uppercase tracking-wider text-[#0A5E36]">Hot Bakery Counter</span>
+                  <span class="text-[0.65rem] font-bold text-emerald-900 bg-emerald-500/20 px-2 py-0.5 rounded-full">Evening Chai Hit</span>
+                </div>
+                <h2 class="font-marcellus text-xl sm:text-[1.35rem] font-bold text-[#140722] mt-1 tracking-tight">Crispy Onion Mini Samosa</h2>
+                <p class="text-sm text-[#160824] mt-2 mb-4 leading-relaxed font-medium">
+                  Crunchy golden triangular pastry pockets in classic Madras tea-kadai style, stuffed with caramelized sweet onions, crispy poha, green chilies, and roasted cumin seeds. Freshly fried for the 4 PM chai break.
+                </p>
+              </div>
+            </div>
+            <div class="px-1 pt-3 border-t border-emerald-400/35 mt-auto">
+              <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20love%20to%20order%20your%20freshly%20prepared%20Crispy%20Onion%20Mini%20Samosas.%20Thank%20you!%20🌟"
+                target="_blank" rel="noopener"
+                class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-400 to-teal-300 text-[#14111E] text-xs font-bold px-4 py-2.5 rounded-full active:scale-95 transition-all duration-300 shadow-sm">
+                <iconify-icon icon="ic:baseline-whatsapp" width="16" height="16"></iconify-icon>
+                <span>Order on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 4: Ghee Mysore Pak -->
+          <div class="menu-card reveal group glass-panel-gold arch-card p-5 flex flex-col justify-between" data-category="traditional-sweets" id="traditional-sweets">
+            <div>
+              <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
+                <img src="brand assets/ghee-mysore-pak.webp" alt="Sri Kailai Pure Ghee Mysore Pak" width="799" height="599" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[0.7rem] font-bold uppercase tracking-wider text-[#804800]">Traditional Sweets</span>
+                  <span class="text-[0.65rem] font-bold text-amber-900 bg-amber-500/20 px-2 py-0.5 rounded-full">100% Pure Ghee</span>
+                </div>
+                <h2 class="font-marcellus text-xl sm:text-[1.35rem] font-bold text-[#140722] mt-1 tracking-tight">Ghee Mysore Pak</h2>
+                <p class="text-sm text-[#160824] mt-2 mb-4 leading-relaxed font-medium">
+                  Our signature melt-in-the-mouth golden royal delicacy, made with freshly roasted besan gram flour, slow-simmered in generous ladles of pure aromatic cow ghee and sugar syrup until velvety, porous, and dissolving on the tongue.
+                </p>
+              </div>
+            </div>
+            <div class="px-1 pt-3 border-t border-amber-400/35 flex items-center justify-between mt-auto">
+              <div>
+                <span class="text-[0.7rem] text-[#1C0B29] block font-bold uppercase tracking-wider">Order Size</span>
+                <span class="font-bold text-sm text-[#804800]">500g Gift Box</span>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20love%20to%20order%20your%20freshly%20prepared%20Pure%20Ghee%20Mysore%20Pak.%20Thank%20you!%20🌟"
+                target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-[#D4AF37] via-[#E5C378] to-[#C68B59] hover:from-[#E5C378] hover:to-[#D4AF37] text-[#14111E] text-xs font-bold px-4 py-2.5 rounded-full active:scale-95 transition-all duration-300">
+                <iconify-icon icon="ic:baseline-whatsapp" width="15" height="15"></iconify-icon>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 5: Motichoor Laddu -->
+          <div class="menu-card reveal reveal-delay-1 group glass-panel-rose arch-card p-5 flex flex-col justify-between" data-category="traditional-sweets">
+            <div>
+              <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
+                <img src="brand assets/motichoor-laddu.webp" alt="Royal Motichoor Laddu Sri Kailai Kundrathur" width="736" height="552" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[0.7rem] font-bold uppercase tracking-wider text-[#88183A]">Traditional Sweets</span>
+                  <span class="text-[0.65rem] font-bold text-rose-900 bg-rose-500/20 px-2 py-0.5 rounded-full">Desi Ghee Pearls</span>
+                </div>
+                <h2 class="font-marcellus text-xl sm:text-[1.35rem] font-bold text-[#140722] mt-1 tracking-tight">Motichoor Laddu</h2>
+                <p class="text-sm text-[#160824] mt-2 mb-4 leading-relaxed font-medium">
+                  Silky, melt-in-the-mouth dessert pearls crafted from fine golden boondi, gently steeped in saffron and cardamom syrup, bound with pure farm desi ghee and garnished with crunchy slivered pistachios.
+                </p>
+              </div>
+            </div>
+            <div class="px-1 pt-3 border-t border-rose-400/35 flex items-center justify-between mt-auto">
+              <div>
+                <span class="text-[0.7rem] text-[#1C0B29] block font-bold uppercase tracking-wider">Order Size</span>
+                <span class="font-bold text-sm text-[#88183A]">500g Box</span>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20love%20to%20order%20your%20freshly%20prepared%20Motichoor%20Laddu.%20Thank%20you!%20🌟"
+                target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-rose-400 via-rose-300 to-amber-300 text-[#14111E] text-xs font-bold px-4 py-2.5 rounded-full active:scale-95 transition-all duration-300">
+                <iconify-icon icon="ic:baseline-whatsapp" width="15" height="15"></iconify-icon>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 6: Tirunelveli Wheat Halwa -->
+          <div class="menu-card reveal reveal-delay-2 group glass-panel-emerald arch-card p-5 flex flex-col justify-between" data-category="traditional-sweets">
+            <div>
+              <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
+                <img src="brand assets/tirunelveli-wheat-halwa.webp" alt="Tirunelveli Wheat Halwa Sri Kailai Kundrathur" width="826" height="619" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[0.7rem] font-bold uppercase tracking-wider text-[#0A5E36]">Traditional Sweets</span>
+                  <span class="text-[0.65rem] font-bold text-emerald-900 bg-emerald-500/20 px-2 py-0.5 rounded-full">Slow-Simmered</span>
+                </div>
+                <h2 class="font-marcellus text-xl sm:text-[1.35rem] font-bold text-[#140722] mt-1 tracking-tight">Tirunelveli Wheat Halwa</h2>
+                <p class="text-sm text-[#160824] mt-2 mb-4 leading-relaxed font-medium">
+                  Iconic glossy dark-amber halwa slow-simmered with freshly extracted fermented samba wheat milk, caramelized sugar, and pure bubbling ghee, studded with whole golden ghee-roasted cashew nuts.
+                </p>
+              </div>
+            </div>
+            <div class="px-1 pt-3 border-t border-emerald-400/35 flex items-center justify-between mt-auto">
+              <div>
+                <span class="text-[0.7rem] text-[#1C0B29] block font-bold uppercase tracking-wider">Order Size</span>
+                <span class="font-bold text-sm text-[#0A5E36]">500g Pack</span>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20love%20to%20order%20your%20freshly%20prepared%20Tirunelveli%20Wheat%20Halwa.%20Thank%20you!%20🌟"
+                target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-emerald-400 to-teal-300 text-[#14111E] text-xs font-bold px-4 py-2.5 rounded-full active:scale-95 transition-all duration-300">
+                <iconify-icon icon="ic:baseline-whatsapp" width="15" height="15"></iconify-icon>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 7: Kaju Katli -->
+          <div class="menu-card reveal group glass-panel-gold arch-card p-5 flex flex-col justify-between" data-category="milk-cashew" id="milk-cashew">
+            <div>
+              <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
+                <img src="brand assets/kaju-katli.webp" alt="Royal Kaju Katli Sri Kailai Kundrathur" width="800" height="600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[0.7rem] font-bold uppercase tracking-wider text-[#804800]">Milk &amp; Cashew Sweets</span>
+                  <span class="text-[0.65rem] font-bold text-amber-900 bg-amber-500/20 px-2 py-0.5 rounded-full">Silver Vark Diamond</span>
+                </div>
+                <h2 class="font-marcellus text-xl sm:text-[1.35rem] font-bold text-[#140722] mt-1 tracking-tight">Kaju Katli</h2>
+                <p class="text-sm text-[#160824] mt-2 mb-4 leading-relaxed font-medium">
+                  Exquisite melt-in-the-mouth diamond fudge crafted from finely ground premium whole cashews and delicate sugar syrup, crowned with shimmering pure edible silver vark. Silky, rich, and naturally pure.
+                </p>
+              </div>
+            </div>
+            <div class="px-1 pt-3 border-t border-amber-400/35 flex items-center justify-between mt-auto">
+              <div>
+                <span class="text-[0.7rem] text-[#1C0B29] block font-bold uppercase tracking-wider">Order Size</span>
+                <span class="font-bold text-sm text-[#804800]">500g Premium Box</span>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20love%20to%20order%20your%20freshly%20prepared%20Royal%20Kaju%20Katli.%20Thank%20you!%20🌟"
+                target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-[#D4AF37] via-[#E5C378] to-[#C68B59] hover:from-[#E5C378] hover:to-[#D4AF37] text-[#14111E] text-xs font-bold px-4 py-2.5 rounded-full active:scale-95 transition-all duration-300">
+                <iconify-icon icon="ic:baseline-whatsapp" width="15" height="15"></iconify-icon>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 8: Malai Peda -->
+          <div class="menu-card reveal reveal-delay-1 group glass-panel-rose arch-card p-5 flex flex-col justify-between" data-category="milk-cashew">
+            <div>
+              <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
+                <img src="brand assets/kesar-malai-peda.webp" alt="Royal Kesar Malai Peda Sri Kailai Sweets" width="736" height="552" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[0.7rem] font-bold uppercase tracking-wider text-[#88183A]">Milk &amp; Cashew Sweets</span>
+                  <span class="text-[0.65rem] font-bold text-rose-900 bg-rose-500/20 px-2 py-0.5 rounded-full">Kesar &amp; Khoya</span>
+                </div>
+                <h2 class="font-marcellus text-xl sm:text-[1.35rem] font-bold text-[#140722] mt-1 tracking-tight">Kesar Malai Peda</h2>
+                <p class="text-sm text-[#160824] mt-2 mb-4 leading-relaxed font-medium">
+                  Rich, velvety fudge medallions crafted from slow-simmered whole milk khoya, delicately infused with Kashmiri saffron threads and cardamom, crowned with pistachios and edible gold leaf.
+                </p>
+              </div>
+            </div>
+            <div class="px-1 pt-3 border-t border-rose-400/35 flex items-center justify-between mt-auto">
+              <div>
+                <span class="text-[0.7rem] text-[#1C0B29] block font-bold uppercase tracking-wider">Order Size</span>
+                <span class="font-bold text-sm text-[#88183A]">500g Box</span>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20love%20to%20order%20your%20freshly%20prepared%20Kesar%20Malai%20Peda.%20Thank%20you!%20🌟"
+                target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-rose-400 via-rose-300 to-amber-300 text-[#14111E] text-xs font-bold px-4 py-2.5 rounded-full active:scale-95 transition-all duration-300">
+                <iconify-icon icon="ic:baseline-whatsapp" width="15" height="15"></iconify-icon>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 9: Rasmalai -->
+          <div class="menu-card reveal reveal-delay-2 group glass-panel-emerald arch-card p-5 flex flex-col justify-between" data-category="milk-cashew">
+            <div>
+              <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
+                <img src="brand assets/rasmalai.webp" alt="Chilled Saffron Ras Malai Sri Kailai Kundrathur" width="1200" height="900" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[0.7rem] font-bold uppercase tracking-wider text-[#0A5E36]">Milk &amp; Cashew Sweets</span>
+                  <span class="text-[0.65rem] font-bold text-emerald-900 bg-emerald-500/20 px-2 py-0.5 rounded-full">Chilled Counter</span>
+                </div>
+                <h2 class="font-marcellus text-xl sm:text-[1.35rem] font-bold text-[#140722] mt-1 tracking-tight">Ras Malai</h2>
+                <p class="text-sm text-[#160824] mt-2 mb-4 leading-relaxed font-medium">
+                  Pillowy, melt-in-the-mouth spongy fresh chhena dumplings steeped in creamy, chilled saffron and cardamom rabri milk, generously garnished with sliced Iranian pistachios and rose petals.
+                </p>
+              </div>
+            </div>
+            <div class="px-1 pt-3 border-t border-emerald-400/35 flex items-center justify-between mt-auto">
+              <div>
+                <span class="text-[0.7rem] text-[#1C0B29] block font-bold uppercase tracking-wider">Order Size</span>
+                <span class="font-bold text-sm text-[#0A5E36]">Pack of 2 Pieces</span>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20love%20to%20order%20your%20freshly%20prepared%20Chilled%20Rasmalai.%20Thank%20you!%20🌟"
+                target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-emerald-400 to-teal-300 text-[#14111E] text-xs font-bold px-4 py-2.5 rounded-full active:scale-95 transition-all duration-300">
+                <iconify-icon icon="ic:baseline-whatsapp" width="15" height="15"></iconify-icon>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 10: Madras Mixture -->
+          <div class="menu-card reveal group glass-panel-gold arch-card p-5 flex flex-col justify-between" data-category="savories-kaaram" id="savories-kaaram">
+            <div>
+              <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
+                <img src="brand assets/madras-mixture.webp" alt="Authentic Madras Mixture Sri Kailai Kundrathur" width="800" height="600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[0.7rem] font-bold uppercase tracking-wider text-[#804800]">Savories &amp; Kaaram</span>
+                  <span class="text-[0.65rem] font-bold text-amber-900 bg-amber-500/20 px-2 py-0.5 rounded-full">Chennai No. 1 Crunch</span>
+                </div>
+                <h2 class="font-marcellus text-xl sm:text-[1.35rem] font-bold text-[#140722] mt-1 tracking-tight">Madras Mixture</h2>
+                <p class="text-sm text-[#160824] mt-2 mb-4 leading-relaxed font-medium">
+                  The quintessential Chennai tea-time crunch — a rich medley of crispy ajwain omapodi, spicy kara boondi, roasted cashews, crunchy peanuts, and almonds tossed with fried curry leaves and crispy aval.
+                </p>
+              </div>
+            </div>
+            <div class="px-1 pt-3 border-t border-amber-400/35 flex items-center justify-between mt-auto">
+              <div>
+                <span class="text-[0.7rem] text-[#1C0B29] block font-bold uppercase tracking-wider">Order Size</span>
+                <span class="font-bold text-sm text-[#804800]">500g Crunchy Pack</span>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20love%20to%20order%20your%20freshly%20prepared%20Signature%20Madras%20Mixture.%20Thank%20you!%20🌟"
+                target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-[#D4AF37] via-[#E5C378] to-[#C68B59] hover:from-[#E5C378] hover:to-[#D4AF37] text-[#14111E] text-xs font-bold px-4 py-2.5 rounded-full active:scale-95 transition-all duration-300">
+                <iconify-icon icon="ic:baseline-whatsapp" width="15" height="15"></iconify-icon>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 11: Butter Murukku -->
+          <div class="menu-card reveal reveal-delay-1 group glass-panel-rose arch-card p-5 flex flex-col justify-between" data-category="savories-kaaram">
+            <div>
+              <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
+                <img src="brand assets/butter-murukku.webp" alt="Golden melt-in-mouth Butter Murukku Sri Kailai Kundrathur" width="800" height="600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[0.7rem] font-bold uppercase tracking-wider text-[#88183A]">Savories &amp; Kaaram</span>
+                  <span class="text-[0.65rem] font-bold text-rose-900 bg-rose-500/20 px-2 py-0.5 rounded-full">White Butter Twist</span>
+                </div>
+                <h2 class="font-marcellus text-xl sm:text-[1.35rem] font-bold text-[#140722] mt-1 tracking-tight">Butter Murukku</h2>
+                <p class="text-sm text-[#160824] mt-2 mb-4 leading-relaxed font-medium">
+                  Golden, melt-in-the-mouth jagged crisp strands prepared from roasted gram flour and generous dollops of fresh churned white butter, fragrant with roasted cumin and asafoetida.
+                </p>
+              </div>
+            </div>
+            <div class="px-1 pt-3 border-t border-rose-400/35 flex items-center justify-between mt-auto">
+              <div>
+                <span class="text-[0.7rem] text-[#1C0B29] block font-bold uppercase tracking-wider">Order Size</span>
+                <span class="font-bold text-sm text-[#88183A]">500g Fresh Pack</span>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20love%20to%20order%20your%20freshly%20prepared%20Butter%20Murukku.%20Thank%20you!%20🌟"
+                target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-rose-400 via-rose-300 to-amber-300 text-[#14111E] text-xs font-bold px-4 py-2.5 rounded-full active:scale-95 transition-all duration-300">
+                <iconify-icon icon="ic:baseline-whatsapp" width="15" height="15"></iconify-icon>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 12: Ribbon Pakoda -->
+          <div class="menu-card reveal reveal-delay-2 group glass-panel-emerald arch-card p-5 flex flex-col justify-between" data-category="savories-kaaram">
+            <div>
+              <div class="aspect-[4/3] arch-img overflow-hidden mb-4 bg-[#1E122A]">
+                <img src="brand assets/ribbon-pakoda.webp" alt="Ribbon Pakoda Sri Kailai Kundrathur" width="800" height="600" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[0.7rem] font-bold uppercase tracking-wider text-[#0A5E36]">Savories &amp; Kaaram</span>
+                  <span class="text-[0.65rem] font-bold text-emerald-900 bg-emerald-500/20 px-2 py-0.5 rounded-full">Garlic &amp; Chili Crisp</span>
+                </div>
+                <h2 class="font-marcellus text-xl sm:text-[1.35rem] font-bold text-[#140722] mt-1 tracking-tight">Ribbon Pakoda</h2>
+                <p class="text-sm text-[#160824] mt-2 mb-4 leading-relaxed font-medium">
+                  Crispy, wide golden-orange wavy ribbons made from freshly ground besan and rice flour, speckled with white sesame seeds and spiced with red chili, hot oil, and asafoetida.
+                </p>
+              </div>
+            </div>
+            <div class="px-1 pt-3 border-t border-emerald-400/35 flex items-center justify-between mt-auto">
+              <div>
+                <span class="text-[0.7rem] text-[#1C0B29] block font-bold uppercase tracking-wider">Order Size</span>
+                <span class="font-bold text-sm text-[#0A5E36]">500g Crunchy Pack</span>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20love%20to%20order%20your%20freshly%20prepared%20Ribbon%20Pakoda.%20Thank%20you!%20🌟"
+                target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 bg-gradient-to-r from-emerald-400 to-teal-300 text-[#14111E] text-xs font-bold px-4 py-2.5 rounded-full active:scale-95 transition-all duration-300">
+                <iconify-icon icon="ic:baseline-whatsapp" width="15" height="15"></iconify-icon>
+                <span>Order</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Custom Orders Callout -->
+        <div class="reveal mt-12 sm:mt-16 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 border border-white/90">
+          <div class="flex items-center gap-4 text-center sm:text-left">
+            <div class="w-12 h-12 rounded-full bg-amber-500/20 text-[#804800] flex items-center justify-center shrink-0 border border-amber-400/30">
+              <iconify-icon icon="solar:bell-bing-bold" width="24" height="24"></iconify-icon>
+            </div>
+            <div>
+              <h3 class="font-marcellus text-lg sm:text-xl font-bold text-[#140722]">Custom Sweet Boxes &amp; Bulk Party Orders</h3>
+              <p class="text-sm text-[#1C0B29] mt-1 font-medium">Planning a family function, wedding feast, or corporate celebration? We customize assorted sweet platters in 100% pure cow ghee.</p>
+            </div>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=919941646688&text=Hi%20Sri%20Kailai!%20I%27d%20like%20to%20inquire%20about%20a%20bulk%20sweet%20order%20or%20custom%20gift%20box."
+            target="_blank" rel="noopener"
+            class="shrink-0 inline-flex items-center gap-2 bg-gradient-to-r from-[#D4AF37] via-[#E5C378] to-[#C68B59] hover:from-[#E5C378] hover:to-[#D4AF37] text-[#14111E] text-xs font-semibold px-6 py-3 rounded-full shadow-md active:scale-95 transition-all duration-300">
+            <iconify-icon icon="ic:baseline-whatsapp" width="16" height="16"></iconify-icon>
+            <span>Custom Order Inquiry</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-[#B896C8]/20 pt-16 pb-12 ambient-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-white/90 p-1 flex items-center justify-center shadow-md border border-[#804800]/20">
+              <img src="brand assets/logo shop.webp" alt="Sri Kailai Logo" width="400" height="286" class="w-full h-full object-contain" />
+            </div>
+            <div>
+              <span class="font-playfair text-xl font-bold text-[#140722] block">Sri Kailai</span>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#804800]">Sweets &amp; Bakery</span>
+            </div>
+          </div>
+          <p class="text-sm text-[#1C0B29] font-medium leading-relaxed">
+            Kundrathur's landmark artisan bakery and traditional sweet stall on Mehta Nagar Main Road. Celebrated for 100% pure cow ghee sweets, oven-fresh hot puffs, custom celebration cakes, and royal wedding catering.
+          </p>
+        </div>
+
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-marcellus text-sm font-bold uppercase tracking-wider text-[#804800]">Quick Links</h4>
+          <ul class="space-y-2 text-xs sm:text-sm font-medium text-[#1C0B29]">
+            <li><a href="index.html#home" class="hover:text-[#804800] transition-colors">Home</a></li>
+            <li><a href="index.html#about" class="hover:text-[#804800] transition-colors">Store Experience</a></li>
+            <li><a href="bakery-sweets.html" class="hover:text-[#804800] transition-colors font-bold text-[#804800]">Bakery &amp; Sweets</a></li>
+            <li><a href="events-catering.html" class="hover:text-[#804800] transition-colors">Event Management</a></li>
+            <li><a href="index.html#reviews" class="hover:text-[#804800] transition-colors">Customer Reviews</a></li>
+            <li><a href="index.html#gallery" class="hover:text-[#804800] transition-colors">Artisan Cakes</a></li>
+            <li><a href="index.html#contact" class="hover:text-[#804800] transition-colors">Store Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-marcellus text-sm font-bold uppercase tracking-wider text-[#804800]">Store Timings &amp; Contact</h4>
+          <div class="space-y-2 text-xs text-[#1C0B29] font-medium">
+            <p class="flex items-center gap-2"><iconify-icon icon="solar:clock-circle-bold" class="text-amber-600"></iconify-icon> Daily: 7:30 AM – 11:30 PM</p>
+            <p class="flex items-center gap-2"><iconify-icon icon="solar:phone-bold" class="text-emerald-700"></iconify-icon> Landline: 044 61320360</p>
+            <p class="flex items-center gap-2"><iconify-icon icon="solar:phone-calling-bold" class="text-amber-600"></iconify-icon> Store Mobile: 99416 46688</p>
+            <p class="flex items-center gap-2"><iconify-icon icon="solar:phone-calling-bold" class="text-emerald-700"></iconify-icon> Helpline: 073580 88816</p>
+            <p class="flex items-center gap-2"><iconify-icon icon="solar:letter-bold" class="text-purple-700"></iconify-icon> srikailaisweets69@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-marcellus text-sm font-bold uppercase tracking-wider text-[#804800]">Kundrathur Store</h4>
+          <p class="text-xs text-[#1C0B29] font-medium leading-relaxed">
+            No 2, Jai Nagar, Mehta Nagar Main Rd, Kundrathur, Chennai, Tamil Nadu 600069 (X4R5+7C).
+          </p>
+          <a href="https://www.google.com/maps/place/Sri+Kailai+Sweets+And+Bakery/@12.9907058,80.1060062,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52618820380f8d:0xba7fe51e0633b7e8!8m2!3d12.9907058!4d80.1085811!16s%2Fg%2F11x6pgz6cl"
+            target="_blank" rel="noopener"
+            class="inline-flex items-center gap-1.5 text-xs font-bold text-[#804800] hover:underline pt-2">
+            <span>Open in Google Maps</span>
+            <iconify-icon icon="solar:arrow-right-up-linear" width="13" height="13"></iconify-icon>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-[#B896C8]/25 flex flex-col sm:flex-row items-center justify-between text-xs text-[#48305E] gap-4">
+        <p>© 2026 Sri Kailai Sweets &amp; Bakery. All rights reserved.</p>
+        <p class="text-center sm:text-right">No 2, Jai Nagar, Mehta Nagar Main Rd, Kundrathur • Open Daily 7:30 AM – 11:30 PM</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a id="floating-whatsapp-fab"
+    href="https://api.whatsapp.com/send?phone=919941646688&text=✨%20Hello%20Sri%20Kailai%20Sweets%20%26%20Bakery!%20🍰💫%0A%0AI%20would%20like%20to%20order%20sweets%20and%20bakery%20delights."
+    target="_blank" rel="noopener"
+    class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full bg-[#25D366] shadow-lg hover:scale-110 active:scale-95 transition-transform duration-300 cursor-pointer"
+    aria-label="Order on WhatsApp">
+    <iconify-icon icon="ic:baseline-whatsapp" width="26" height="26" class="relative z-10 text-white"></iconify-icon>
+  </a>
+
+  <!-- Lenis Script -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <script>
+    const lenis = new Lenis({ duration: 1.05, smoothWheel: true });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    // Mobile Menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuOpen = false;
+
+    function openMobileMenu() {
+      if (menuOpen) return;
+      menuOpen = true;
+      document.body.classList.add('mobile-menu-open');
+      if (menuToggle) { menuToggle.classList.add('is-active'); menuToggle.setAttribute('aria-expanded', 'true'); }
+      if (mobileMenu) { mobileMenu.classList.add('open'); mobileMenu.setAttribute('aria-hidden', 'false'); }
+    }
+    function closeMobileMenu() {
+      if (!menuOpen) return;
+      menuOpen = false;
+      document.body.classList.remove('mobile-menu-open');
+      if (menuToggle) { menuToggle.classList.remove('is-active'); menuToggle.setAttribute('aria-expanded', 'false'); }
+      if (mobileMenu) { mobileMenu.classList.remove('open'); mobileMenu.setAttribute('aria-hidden', 'true'); }
+    }
+    if (menuToggle) {
+      menuToggle.addEventListener('click', (e) => {
+        e.preventDefault(); e.stopPropagation();
+        menuOpen ? closeMobileMenu() : openMobileMenu();
+      });
+    }
+    document.addEventListener('click', (e) => {
+      if (menuOpen && mobileMenu && menuToggle && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    // Call dropdown
+    const callBtn = document.getElementById('call-dropdown-btn');
+    const callMenu = document.getElementById('call-dropdown-menu');
+    const closeCall = document.getElementById('close-call-menu');
+    let callOpen = false;
+
+    function toggleCallMenu() {
+      callOpen = !callOpen;
+      if (callMenu) {
+        if (callOpen) {
+          callMenu.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+          callMenu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        } else {
+          callMenu.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+          callMenu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        }
+      }
+    }
+    if (callBtn) callBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleCallMenu(); });
+    if (closeCall) closeCall.addEventListener('click', () => { if (callOpen) toggleCallMenu(); });
+    document.addEventListener('click', (e) => {
+      if (callOpen && callMenu && !callMenu.contains(e.target) && !callBtn.contains(e.target)) {
+        toggleCallMenu();
+      }
+    });
+
+    // Category Filter Tabs
+    const tabBtns = document.querySelectorAll('.menu-tab-btn');
+    const menuCards = document.querySelectorAll('.menu-card');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => {
+          b.classList.remove('active', 'bg-gradient-to-r', 'from-[#D4AF37]', 'via-[#E5C378]', 'to-[#C68B59]', 'text-[#14111E]', 'shadow-sm');
+          b.classList.add('glass-pill', 'text-[#1C0B29]');
+        });
+        btn.classList.add('active', 'bg-gradient-to-r', 'from-[#D4AF37]', 'via-[#E5C378]', 'to-[#C68B59]', 'text-[#14111E]', 'shadow-sm');
+        btn.classList.remove('glass-pill');
+
+        const cat = btn.getAttribute('data-filter');
+        menuCards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Check URL hash on load
+    if (window.location.hash) {
+      const targetCat = window.location.hash.replace('#', '');
+      const matchingBtn = document.querySelector(`.menu-tab-btn[data-filter="${targetCat}"]`);
+      if (matchingBtn) matchingBtn.click();
+    }
+
+    // Scroll reveal observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>

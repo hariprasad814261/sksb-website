@@ -29,6 +29,8 @@ http.createServer((req, res) => {
   // Default to index.html for directory requests
   if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
     filePath = path.join(filePath, 'index.html');
+  } else if (!fs.existsSync(filePath) && fs.existsSync(filePath + '.html')) {
+    filePath = filePath + '.html';
   }
 
   const ext = path.extname(filePath).toLowerCase();
@@ -46,6 +48,8 @@ http.createServer((req, res) => {
     });
     res.end(data);
   });
-}).listen(PORT, () => {
-  console.log(`\n  ✦  Sri Kailai dev server → http://localhost:${PORT}\n`);
+}).listen(PORT, '0.0.0.0', () => {
+  console.log(`\n  ✦  Sri Kailai Dev Server:`);
+  console.log(`  ✦  Local (PC):     http://localhost:${PORT}`);
+  console.log(`  ✦  Mobile Network: http://10.157.45.42:${PORT}\n`);
 });
